@@ -140,9 +140,78 @@ any line starting with `#` can be used to store comments.
             print("This number is: %d" % num)
 
 
+- [ ] A note about "copying objects"
+  - Try this:
+    - `firstNum = 2`
+    - `secondNum = firstNum`
+    - `firstNum = 5`
+    - `firstNum`
+    - `secondNum`
+  - Now try this:
+    - `firstList = [1,2,3]`
+    - `secondList = firstList`
+    - `firstList.extend([4,5,6])`
+    - `firstList`
+    - `secondList`
 
 
+- [ ] Tuples
+  - Tuples are like lists, but they're not mutable (can't be changed)
+  - Tuples are instantiated using parentheses - `()`
+  - Try this:
+    - `myTuple = (1,2,3)`
+    - `myTuple`
+    - `myTuple[1]`
+    - `myTuple[1] = 5`
+
+
+- [ ] Dictionaries
+  - Dictionaries are incredibly useful for storing pairs of things - known as "keys" and "values"
+  - They don't store these pairs in a particular order, like lists do, but they make looking up values from keys much faster.
+  - The keys and values can each be different types of variables
+  - To create a new dictionary, you can use this syntax:
+    - `myDict = {"keyOne":"valueOne", "keyTwo":"valueTwo"}`
+  - To look at the methods available for dictionaries, try this:
+    - `dir(myDict)`
+  - You can access a value, as long as you know its key, either of these ways:
+    - `myDict.get("keyOne")`
+    - `myDict["keyOne"]`
+  - You can change a value using its key, this way:
+    - `myDict["keyOne"] = <NEW_VALUE>`
+  - You can add a new key/value pair using the update method:
+    - `myDict.update({<NEW_KEY:NEW_VALUE})`
+
+
+- [ ] Importing libraries and drawing random numbers
+  - Sometimes it will be helpful to use functionality that's not part of the core python functionality.
+  - Thankfully, python has a built-in way to import new functions that other people have written to extend the core functions
+  - Once you know the name of a library, you can use the `import` command to load it (if it's already been installed).
+  - One library that we're going to use today is called `random`.
+  - Once it's loaded, you'll need to precede any of its functions with `random.` in order to use them.
+  - Try this:
+    - `import random`
+    - `random.random()` - Do this a few times
+    - `random.uniform(0,1)` - Do this a few times
+    - `random.uniform(0,5)` - Do this a few times
+    - `random.choice([5,6,7,8])` - Do this a few times
+    - `firstList`
+    - `random.shuffle(firstList)`
+    - `firstList`
+    - `random.shuffle(firstList)`
+    - `firstList`
+    - `random.shuffle(firstList)`
+    - `firstList`
+
+
+- [ ] Let's try to create a coin-flipping and dice-rolling program together
 
 ## References
-
 - [Python Style Guide](https://www.python.org/dev/peps/pep-0008/)
+
+## Weekly Assignment (Due Tuesday, Oct. 16th)
+- Fork and clone this week's repository
+- Create the following script, put it in a folder with your name, and add that folder to the assignments folder (DON'T create a new branch)
+- Your script should do these things:
+  - Present a menu to the user asking if they want to (1) translate a protein-coding nucleotide sequence to amino acids -or- (2) randomly draw a codon from the sequence
+  - After the user selects an option, the script should prompt the user for their protein-coding sequence
+  - The script should then do whichever thing the user requested
