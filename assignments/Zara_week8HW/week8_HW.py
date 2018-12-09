@@ -41,10 +41,12 @@ if menu == "1":
 #User is asked to enter their DNA sequence and the sequence is then split into a list of codons.
 else:
 	dnaSeq = input ("Please enter DNA sequence in all capital letters: ")
-	codon = [dnaSeq[n:n+3] for n in range(0, len(dnaSeq), 3)]
+	codon = [dnaSeq[n:n+3] for n in range(0, len(dnaSeq), 3)]	# DB: Really good!
 	print(codon)
 
 #One random codon is printed from the DNA sequence.
 	import random
 	randomCodon = random.choice(codon)
 	print(randomCodon)
+
+# DB: Nicely done! Your code seems to work well, is written efficiently, and is well commented.
